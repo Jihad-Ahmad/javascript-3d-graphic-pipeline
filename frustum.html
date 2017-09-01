@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="frustum.js"></script>
+
+</head>
+
+<body>
+
+    <table border="2" width="100%">
+        <tr>
+            <td>
+
+            </td>
+            <td><b>Vizualized Camera Rotation</b></td>
+            <td><b>Vizualized Camera Linear Motion</b></td>
+            <td><b>Actual Camera Linear Motion</b></td>
+        </tr>
+        <tr>
+            <td>
+                <canvas id="canvas6" style="background-color: #aaaaaa;" width="500px" height="500px"> your browser dosn't support  </canvas>
+            </td>
+            <td>
+
+                <table border='1'>
+                    <tr>
+                        <td></td>
+                        <td><img onclick="rra();" src='up.jpg' width='50px' height='50px' /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><img onclick="ruc();" src='left.jpg' width='50px' height='50px' /></td>
+                        <td> <img onclick="raa();" src="zoomin.jpg" width='50px' height='50px' />
+                            <img onclick="rac();" src="zoomout.jpg" width='50px' height='50px' /></td>
+                        <td><img onclick="rua();" src='right.jpg' width='50px' height='50px' /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><img onclick="rrc();" src='down.jpg' width='50px' height='50px' /></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+            </td>
+
+
+
+            <td>
+
+                <table border='1'>
+
+                    <tr>
+                        <td></td>
+                        <td><img onclick="up2();" src='up.jpg' width='50px' height='50px' /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><img onclick="left2();" src='left.jpg' width='50px' height='50px' /></td>
+                        <td> <img onclick="front2();" src="zoomin.jpg" width='50px' height='50px' />
+                            <img onclick="back2();" src="zoomout.jpg" width='50px' height='50px' /></td>
+                        <td><img onclick="right2();" src='right.jpg' width='50px' height='50px' /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><img onclick="down2();" src='down.jpg' width='50px' height='50px' /></td>
+                        <td></td>
+                    </tr>
+
+                </table>
+            </td>
+
+            <td>
+
+                <table border='1'>
+
+                    <tr>
+                        <td></td>
+                        <td><img onclick="up();" src='up.jpg' width='50px' height='50px' /></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><img onclick="left();" src='left.jpg' width='50px' height='50px' /></td>
+                        <td> <img onclick="front();" src="zoomin.jpg" width='50px' height='50px' />
+                            <img onclick="back();" src="zoomout.jpg" width='50px' height='50px' /></td>
+                        <td><img onclick="right();" src='right.jpg' width='50px' height='50px' /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><img onclick="down();" src='down.jpg' width='50px' height='50px' /></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+
+
+    </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    </table>
+
+    <table width="100%" border="0" align="center">
+        <tr>
+            <td colspan="3">
+
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+
+            <td align='left'>
+
+                <script type="application/x-javascript">
+                    var canvas = document.getElementById("canvas6");
+                    if (canvas.getContext) {
+                        var context = canvas.getContext("2d");
+                    }
+                </script>
+            </td>
+        </tr>
+    </table>
+    <div id="illust"></div>
+    <div>Frustum parameters' setting:</div>
+    <div>
+        far distance:<input type="range" min="5" max="100" step="5" onchange="getDistance(this.value)"></input>
+        angle:<input type="range" min="0" max="45" step="5" onchange="getAngle(this.value)"></input>
+
+    </div>
+    <div id="angle"></div>
+    <div id="distance"></div>
+
+</body>
+
+</html>
